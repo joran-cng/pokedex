@@ -19,12 +19,12 @@ const props = defineProps({
 });
 
 const pokemonId = computed(() => {
-  const match = props.pokemon.url.match(/\/pokemon\/(\d+)\/$/); // Assurez-vous que l'URL se termine par un slash pour cette regex
-  return match ? match[1] : undefined; // Retourne l'ID ou undefined si l'ID n'est pas trouvé
+  const match = props.pokemon.url.match(/\/pokemon\/(\d+)\/$/);
+  return match ? match[1] : undefined;
 });
 
 const formattedId = computed(() => {
-  return pokemonId.value ? `#${pokemonId.value.padStart(3, '0')}` : ''; // Formatte l'ID avec des zéros
+  return pokemonId.value ? `#${pokemonId.value.padStart(3, '0')}` : '';
 });
 </script>
 
@@ -47,11 +47,11 @@ const formattedId = computed(() => {
 }
 
 .pokemon-solo.selected {
-  border-color: blue; /* Bordure pour le Pokémon sélectionné */
+  border-color: var(--btntext);
 }
 
 .pokemon-id {
-  font-weight: bold; /* Style pour ID */
+  font-weight: 100;
 }
 
 .pokeball {
