@@ -13,11 +13,10 @@ import {computed} from 'vue';
 
 const props = defineProps({
   base: Number,
-  statType: String // Utilisation de 'statType' au lieu de 'isHP'
+  statType: String
 });
 
 const max = computed(() => {
-  // Calcul du maximum basé sur si c'est HP ou un autre stat
   return props.statType === "hp"
     ? (2 * props.base + 31 + (252 / 4)) * 1 + 110
     : (2 * props.base + 31 + (252 / 4)) * 1 + 5;
