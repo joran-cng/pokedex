@@ -52,11 +52,6 @@ function confirmAction() {
   emit('confirm');
 }
 
-function cancelAction() {
-  // Annuler ou retour à l'écran précédent
-  console.log('Action canceled');
-}
-
 function goHome() {
   router.push('/');
 }
