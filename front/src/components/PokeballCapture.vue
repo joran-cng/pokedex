@@ -15,7 +15,7 @@ const props = defineProps({
 });
 
 const isCaptured = ref(false);
-const cumulativeRotation = ref(0); // Cumulative rotation degree
+const cumulativeRotation = ref(0);
 
 async function checkCaptureStatus() {
   if (props.pokemonId) {
@@ -30,7 +30,7 @@ async function checkCaptureStatus() {
 
 async function toggleCapture() {
   if (props.pokemonId) {
-    cumulativeRotation.value += 360; // Add 360 degrees on each click
+    cumulativeRotation.value += 360;
     try {
       const response = await axios.post(`http://localhost:80/pokemon/${props.pokemonId}/toggleCapture`);
       isCaptured.value = response.data.captures[props.pokemonId] !== undefined;
