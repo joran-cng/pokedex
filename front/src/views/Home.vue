@@ -46,7 +46,7 @@ EventBus.on('navigate', (direction) => {
 });
 
 EventBus.on('confirm', () => {
-  const selectedPokemon = visiblePokemons.value[0];  // Premier élément actuellement sélectionné
+  const selectedPokemon = visiblePokemons.value[0];
   if (selectedPokemon) {
     const parts = selectedPokemon.url.split('/');
     const pokemonId = parts[parts.length - 2];
@@ -76,7 +76,7 @@ watch(searchQuery, (newValue) => {
 });
 
 onMounted(() => {
-  if (pokemons.value.length === 0) loadAllPokemons();  // Load initially if not loaded
+  if (pokemons.value.length === 0) loadAllPokemons();
 });
 
 </script>
@@ -96,16 +96,16 @@ li {
 }
 
 input[type="text"] {
-  width: 90%; /* Ajustez selon la largeur désirée */
+  width: 90%;
   padding: 8px 10px;
   margin: 10px auto;
   display: block;
-  border-radius: 12px; /* Arrondit les coins */
-  border: 2px solid #ccc; /* Couleur de bordure légère */
-  background-color: #f8f8f8; /* Couleur de fond légère pour le contraste */
-  color: #333; /* Couleur du texte */
-  font-size: 16px; /* Taille de police appropriée */
-  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transition douce */
+  border-radius: 12px;
+  border: 2px solid #ccc;
+  background-color: #f8f8f8;
+  color: #333;
+  font-size: 16px;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 input[type="text"]:focus {
