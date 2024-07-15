@@ -42,7 +42,7 @@ import PokeballCapture from "@/components/PokeballCapture.vue";
 const route = useRoute();
 const pokemonId = route.params.id;
 const pokemonDetails = ref({});
-const imageLoaded = ref(false);  // État pour suivre si l'image est chargée
+const imageLoaded = ref(false);
 
 async function fetchPokemonDetails() {
   const url = `http://localhost:80/pokemon/${pokemonId}`;
@@ -98,9 +98,9 @@ onMounted(fetchPokemonDetails);
 }
 
 img {
-  width: 100%; /* Assurez-vous que l'image remplit le conteneur */
+  width: 100%;
   height: 100%;
-  object-fit: cover; /* L'image couvre tout l'espace disponible, recadrée si nécessaire */
+  object-fit: cover;
 }
 
 h2 {
